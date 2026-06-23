@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>team</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'team.css' %}" rel="stylesheet">
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="{% url 'home' %}" class="logo">Beauty <span>Parlour</span></a>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'service' %}">Services</a></li>
+            <li><a href="{% url 'price' %}">Price</a></li>
+            <li><a href="{% url 'team' %}">Barber</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="team">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Our Barber Team</p>
+                <h2>Meet Our Hair Cut Experts</h2>
+            </div>
+            <div class="row">
+           
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'team_1.png' %}" alt="Adam Phillips">
+                        </div>
+                        <div class="team-text">
+                            <h2>Adam Phillips</h2>
+                            <p>Master Barber</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'team_2.png' %}" alt="Dylan Adams">
+                        </div>
+                        <div class="team-text">
+                            <h2>Dylan Adams</h2>
+                            <p>Hair Expert</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'team_3.png' %}" alt="Gloria Edwards">
+                        </div>
+                        <div class="team-text">
+                            <h2>Gloria Edwards</h2>
+                            <p>Beard Expert</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="{% static 'team_4.png' %}" alt="Josh Dunn">
+                        </div>
+                        <div class="team-text">
+                            <h2>Josh Dunn</h2>
+                            <p>Color Expert</p>
+                        </div>
+                    </div>
+                </div>
+
+                {% for i in data %}
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="media//{{i.barber_picture}}" alt="{{i.barber_name}}">
+                        </div>
+                        <div class="team-text">
+                            <h2>{{i.barber_name}}</h2>
+                            <p>{{i.barber_profession}}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-contact">
+                                <h2>Salon Address</h2>
+                                <p><i class="fa fa-map-marker-alt"></i> D ground, Faisalabad, Pakistan</p>
+                                <p><i class="fa fa-phone-alt"></i> +92 349 3982652</p>
+                                <p><i class="fa fa-envelope"></i> projecttest09python@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer-newsletter">
+
+                        <div class="form">
+                            <form id="messageForm">
+                                {% csrf_token %}
+                                <input type="text" id="content" name="content" class="form-control" placeholder="Enter your message here...">
+                                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                            </form>
+                            <div id="messageStatus" class="mt-2" style="color: red;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2024 Hashir, All Right Reserved.</p>
+        </div>
+    </div>
+    
+    <script>
+        // message label 
+        document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("messageForm");
+        const messageStatus = document.getElementById("messageStatus");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();  // Prevent form from refreshing the page
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            const content = document.getElementById("content").value;
+
+            fetch("", {  // The current URL will handle the request
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "X-CSRFToken": csrfToken,
+                },
+                body: new URLSearchParams({ content: content }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        messageStatus.style.color = "green";
+                    } else {
+                        messageStatus.style.color = "red";
+                    }
+                    messageStatus.textContent = data.message;
+                    document.getElementById("content").value = "";
+                }
+                
+            )
+                
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>price</title>
+
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'price.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="{% url 'home' %}" class="logo">Beauty <span>Parlour</span></a>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'service' %}">Services</a></li>
+            <li><a href="{% url 'price' %}">Price</a></li>
+            <li><a href="{% url 'team' %}">Barber</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="price">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Our Best Pricing</p>
+                <h2>We Provide Best Price in the City</h2>
+            </div>
+            <div class="row">
+                <!-- Existing Pricing Items -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'hair-services.png' %}" alt="Hair Cut">
+                        </div>
+                        <div class="price-text">
+                            <h2>Hair Cut</h2>
+                            <h3>$9.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'hair_wash.png' %}" alt="Hair Wash">
+                        </div>
+                        <div class="price-text">
+                            <h2>Hair Wash</h2>
+                            <h3>$10.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'hair_color.png' %}" alt="Hair Color">
+                        </div>
+                        <div class="price-text">
+                            <h2>Hair Color</h2>
+                            <h3>$11.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'hair_shave.png' %}" alt="Hair Shave">
+                        </div>
+                        <div class="price-text">
+                            <h2>Hair Shave</h2>
+                            <h3>$12.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Pricing Items -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'blow_dry.png' %}" alt="Blow Dry">
+                        </div>
+                        <div class="price-text">
+                            <h2>Blow Dry</h2>
+                            <h3>$13.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'hair_extension.png' %}" alt="Hair Extensions">
+                        </div>
+                        <div class="price-text">
+                            <h2>Hair Extensions</h2>
+                            <h3>$14.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'hair_treament.png' %}" alt="Hair Treatment">
+                        </div>
+                        <div class="price-text">
+                            <h2>Hair Treatment</h2>
+                            <h3>$15.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'beard_dye.png' %}" alt="Beard Dye">
+                        </div>
+                        <div class="price-text">
+                            <h2>Beard Dye</h2>
+                            <h3>$16.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'eyebrow_shaping.png' %}" alt="Eyebrow Shaping">
+                        </div>
+                        <div class="price-text">
+                            <h2>Eyebrow Shaping</h2>
+                            <h3>$17.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'scalp_massage.png' %}" alt="Scalp Massage">
+                        </div>
+                        <div class="price-text">
+                            <h2>Scalp Massage</h2>
+                            <h3>$18.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'body_cleanup.png' %}" alt="Scalp Massage">
+                        </div>
+                        <div class="price-text">
+                            <h2>Clean Up</h2>
+                            <h3>$18.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item">
+                        <div class="price-img">
+
+                            <img src="{% static 'trim.png' %}" alt="Scalp Massage">
+                        </div>
+                        <div class="price-text">
+                            <h2>Trim</h2>
+                            <h3>$18.99</h3>
+                        </div>
+                    </div>
+                </div>
+
+                
+                {% for i in data %}
+                
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="price-item"> 
+                        <div class="price-img">
+
+                            <img src="media//{{i.picture}}" alt="{{i.service_name}}">
+                        </div>
+                        <div class="price-text">
+                            <h2>{{i.service_name}}</h2>
+                            <h3>{{i.price}}</h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-contact">
+                                <h2>Salon Address</h2>
+                                <p><i class="fa fa-map-marker-alt"></i> D ground, Faisalabad, Pakistan</p>
+                                <p><i class="fa fa-phone-alt"></i> +92 349 3982652</p>
+                                <p><i class="fa fa-envelope"></i> projecttest09python@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer-newsletter">
+
+                        <div class="form">
+                            <form id="messageForm">
+                                {% csrf_token %}
+                                <input type="text" id="content" name="content" class="form-control" placeholder="Enter your message here...">
+                                <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                            </form>
+                            <div id="messageStatus" class="mt-2" style="color: red;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>&copy; 2024 Hashir, All Right Reserved.</p>
+        </div>
+    </div>
+
+
+    <script>
+        // message label 
+        document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("messageForm");
+        const messageStatus = document.getElementById("messageStatus");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();  // Prevent form from refreshing the page
+            const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            const content = document.getElementById("content").value;
+
+            fetch("", {  // The current URL will handle the request
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "X-CSRFToken": csrfToken,
+                },
+                body: new URLSearchParams({ content: content }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        messageStatus.style.color = "green";
+                    } else {
+                        messageStatus.style.color = "red";
+                    }
+                    messageStatus.textContent = data.message;
+                    document.getElementById("content").value = "";
+                }
+                
+            )
+                
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+        });
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Elegant Site</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'contact.css' %}" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="{% url 'home' %}" class="logo">Beauty <span>Parlour</span></a>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'service' %}">Services</a></li>
+            <li><a href="{% url 'price' %}">Price</a></li>
+            <li><a href="{% url 'team' %}">Barber</a></li>
+            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{% static 'contact.png' %}" alt="Contact Us" class="img-fluid contact-side-img" />
+                </div>
+                <div class="col-md-8">
+                    <div class="contact-form">
+                        <form method="POST" action="" name="sentMessage" id="contactForm" novalidate="novalidate">
+                            {% csrf_token %}
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="name" name="username" placeholder="Your Name" required />
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required />
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required />
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+                            </div>
+                            {% if success %}
+                            <div class="alert alert-success" style="background: transparent;">Your message has been sent successfully!</div>
+                            {% elif error %}
+                            <div class="alert alert-danger">{{ error }}</div>
+                            {% endif %}
+                            <div class="text-center">
+                                <button class="btn custom-send-btn" type="submit" id="sendMessageButton">
+                                    <i class="fa fa-paper-plane"></i> Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
