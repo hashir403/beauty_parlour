@@ -1,0 +1,229 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.top-bar-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.text h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.text p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.social a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.navbar ul li a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.hero {
+    display: flex;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+
+
+#videoContainer {
+    /* display: none;  */
+    position: fixed; /* Fixed to the screen */
+    top: 10%; /* Position it near the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to ensure exact centering */
+    z-index: 9999; /* Ensure it appears above other content */
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: make the background dark */
+    padding: 20px; /* Optional: add some space around the video */
+}
+
+#video {
+    width: 400px; /* Set the video width to 400px */
+}
+
+#closeVideoBtn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#closeVideoBtn:hover {
+    background-color: darkred;
+}
+
+
+
+
+
+.hero button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+.footer {
+    position: relative;
+    margin-top: 45px;
+    padding-top: 90px;
+    background: #000; 
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-newsletter {
+    position: relative;
+    margin-bottom: 45px;
+    color: #fff; 
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-newsletter h2 {
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(213, 185, 129); 
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff; 
+    transition: .3s;
+}
+
+.footer .footer-link a:hover {
+    color: rgb(213, 185, 129); 
+}
+
+.footer .footer-newsletter .btn {
+    position: absolute;
+    top: 50px;
+    right: 8px;
+    height: 44px;
+    padding: 8px 20px;
+    background-color: rgb(213, 185, 129); 
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.footer .footer-newsletter .form {
+    /* display: flex; */
+    width: 100%;
+}
+
+.footer .footer-newsletter input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid rgb(213, 185, 129);
+    font-size: 16px;
+}
+
+.footer .footer-newsletter input::placeholder {
+    color: #BDC3C7;
+}
+
+
+.footer .copyright {
+    text-align: center;
+    padding: 20px;
+    background: #000; 
+    color: #fff; 
+    font-size: 14px;
+}
+
+
+
+
+#messageStatus {
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}

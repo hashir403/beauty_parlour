@@ -1,0 +1,181 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+
+.team {
+    width: 100%;
+    padding: 50px 0 20px;
+}
+
+.team .section-header {
+    margin-bottom: 30px;
+}
+
+.team .team-item {
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.team .team-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team .team-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.team .team-img img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team .team-img:hover img {
+    transform: scale(1.1);
+}
+
+.team .team-text {
+    padding: 20px;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.team .team-text h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.team .team-text p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.team .team-item:hover .team-text {
+    background-color: #d5b981;
+    color: #fff;
+}
+
+.team .team-item:hover .team-text h2,
+.team .team-item:hover .team-text p {
+    color: #fff;
+}
+
+
+
+
+.footer {
+    position: relative;
+    margin-top: 45px;
+    padding-top: 90px;
+    background: #000; 
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-newsletter {
+    position: relative;
+    margin-bottom: 45px;
+    color: #fff; 
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-newsletter h2 {
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(213, 185, 129); 
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff; 
+    transition: .3s;
+}
+
+.footer .footer-link a:hover {
+    color: rgb(213, 185, 129); 
+}
+
+.footer .footer-newsletter .btn {
+    position: absolute;
+    top: 50px;
+    right: 8px;
+    height: 44px;
+    padding: 8px 20px;
+    background-color: rgb(213, 185, 129); 
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.footer .footer-newsletter .form {
+    /* display: flex; */
+    width: 100%;
+}
+
+.footer .footer-newsletter input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid rgb(213, 185, 129); 
+    font-size: 16px;
+}
+
+.footer .footer-newsletter input::placeholder {
+    color: #BDC3C7;
+}
+
+.footer .copyright {
+    text-align: center;
+    padding: 20px;
+    background: #000; 
+    color: #fff; 
+    font-size: 14px;
+}
+
+#messageStatus {
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
